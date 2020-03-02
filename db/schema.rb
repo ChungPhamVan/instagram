@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_145447) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2020_02_29_145447) do
     t.text "bio"
     t.string "phone"
     t.string "gender"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end

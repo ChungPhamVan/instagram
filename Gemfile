@@ -5,6 +5,7 @@ ruby "2.6.5"
 
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap", "~> 4.4", ">= 4.4.1"
+gem "config"
 gem "devise"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.7"
